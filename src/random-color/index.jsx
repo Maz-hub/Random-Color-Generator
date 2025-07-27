@@ -22,7 +22,7 @@ export default function RandomColor() {
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
 
-    setColor(`rgb${r},${g},${b}`);
+    setColor(`rgb(${r},${g},${b})`);
   }
 
   return (
@@ -44,6 +44,10 @@ export default function RandomColor() {
         >
           Generate Random Color
         </button>
+      </div>
+      <div className="showColor">
+        <h1> {typeOfColor === "rgb" ? "RGB Color" : "HEX Color"}</h1>
+        <h2>{color}</h2>
       </div>
     </div>
   );

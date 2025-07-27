@@ -31,3 +31,12 @@ body {
     -webkit-user-select: none;
     touch-action: manipulation;
 }
+
+.showColor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+    font-size: 2em;
+    margin-top: 4rem;
+}
