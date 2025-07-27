@@ -1,12 +1,28 @@
-# React + Vite
+# 🎨 Random Color Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This mini React app generates random HEX or RGB background colors when you click a button.
 
-Currently, two official plugins are available:
+## 🛠️ What I built
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- A full-screen background that updates with a random color.
+- Three buttons:
+  1. **HEX Color** – sets mode to generate HEX.
+  2. **RGB Color** – sets mode to generate RGB.
+  3. **Generate Random Color** – creates a new color depending on the selected mode.
+- Below the buttons, the current color type and the generated color are displayed.
 
-## Expanding the ESLint configuration
+## 🧠 What I learned
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `useState` hook to manage both the color type (`hex` or `rgb`) and the current color value.
+- How to dynamically change styles in JSX using inline styling and `style={{}}` syntax.
+- Writing utility logic to create:
+  - A random HEX color by looping 6 times and grabbing characters from a HEX array.
+  - A random RGB color using `Math.random()` and `Math.floor()` to get values from 0–255.
+- Conditional rendering based on state (e.g., showing HEX or RGB based on user choice).
+
+## 🧵 Logic flow
+
+1. When a user clicks either "HEX" or "RGB", we update the color type using `setTypeOfColor`.
+2. The "Generate Random Color" button runs a different function depending on the mode.
+3. The background updates using `setColor()` with the generated color string.
+4. Text below shows what type of color is selected and the color code currently active.
