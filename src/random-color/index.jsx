@@ -17,16 +17,22 @@ export default function RandomColor() {
     setColor(hexColor);
   }
 
-  function handleCreateRandomRgbColor() {}
+  function handleCreateRandomRgbColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+
+    setColor(`rgb${r},${g},${b}`);
+  }
 
   return (
     <div style={{ width: "100vw", height: "100vh", background: color }}>
       <div className="buttons">
         <button onClick={() => setTypeOfColor("hex")} className="btn">
-          Create HEX Color
+          HEX Color
         </button>
         <button onClick={() => setTypeOfColor("rgb")} className="btn">
-          Create RGB Color
+          RGB Color
         </button>
         <button
           onClick={
